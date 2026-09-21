@@ -1,0 +1,11 @@
+# Unrelated local experiment folder
+localpeak/
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
