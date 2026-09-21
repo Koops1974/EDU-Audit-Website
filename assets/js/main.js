@@ -12,13 +12,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  var form = document.querySelector("form[data-js-form]");
+  var form = document.getElementById("contact-form");
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var success = form.querySelector(".form-success");
-      if (success) success.style.display = "block";
-      form.reset();
+      fetch("https://formspree.io/f/xqpapylz", {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      }).then(function (res) {
+        if (res.ok) {
+          form.reset();
+          form.querySelector(".form-success").style.display = "block";
+        } else {
+          alert("Something went wrong — please email hello@eduaudit.co.uk instead.");
+        }
+      }).catch(function () {
+        alert("Network error — please email hello@eduaudit.co.uk instead.");
+      });
     });
   }
 });
