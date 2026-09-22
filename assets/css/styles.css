@@ -260,6 +260,25 @@ tbody tr:hover { background: var(--mist); }
 .form-beta { border: 1px dashed #d9a94f; background: rgba(242, 166, 59, 0.08); border-radius: 10px; padding: 14px 16px; margin-top: 18px; font-size: 0.9rem; color: var(--slate); }
 .form-beta b { color: var(--navy); }
 
+/* ---------- How the Audit Works (numbered steps) ---------- */
+.process-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.process-step { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 24px 20px 22px; box-shadow: var(--shadow); }
+.process-step .step-id { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--navy-700), var(--indigo-dark)); color: var(--amber); font-family: var(--font-head); font-weight: 700; font-size: 0.98rem; letter-spacing: 0.02em; margin-bottom: 18px; box-shadow: 0 8px 18px rgba(11, 31, 51, 0.22); }
+.process-step h3 { margin-bottom: 8px; }
+.process-step p { font-size: 0.93rem; }
+
+/* ---------- Report media (genuine report screenshots go here) ---------- */
+.feature-row .media figcaption { position: absolute; bottom: 14px; left: 14px; z-index: 2; background: rgba(11, 31, 51, 0.78); color: var(--white); font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+
+/* ---------- Emphasis line ---------- */
+.emphasis-line { margin-top: 40px; padding: 20px 26px; border-left: 4px solid var(--amber); border-radius: 0 12px 12px 0; font-family: var(--font-head); font-size: 1.15rem; font-weight: 600; line-height: 1.4; color: var(--navy); background: linear-gradient(120deg, rgba(242, 166, 59, 0.12), transparent); }
+.section-navy .emphasis-line { color: var(--white); background: rgba(255, 255, 255, 0.06); }
+
+/* ---------- Experience & expertise ---------- */
+.media-lines { position: relative; display: flex; flex-direction: column; gap: 16px; font-family: var(--font-head); font-size: 1.12rem; text-align: left; }
+.media-lines span { color: var(--white); font-weight: 600; }
+.media-lines span::before { content: "—"; color: var(--amber); margin-right: 12px; }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy-900); color: #9fb8cb; padding: 72px 0 26px; position: relative; overflow: hidden; }
 .site-footer::after { content: "EduAudit"; position: absolute; bottom: -46px; right: 24px; font-family: var(--font-head); font-weight: 700; font-size: clamp(5rem, 16vw, 12rem); color: rgba(255, 255, 255, 0.04); letter-spacing: -0.03em; pointer-events: none; line-height: 1; }
@@ -283,6 +302,7 @@ tbody tr:hover { background: var(--mist); }
   .hero-split { grid-template-columns: 1fr; gap: 56px; }
   .hero-visual { max-width: 480px; }
   .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(3, 1fr); }
   .feature-row { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
   .form .form-row { grid-template-columns: 1fr; }
@@ -297,6 +317,7 @@ tbody tr:hover { background: var(--mist); }
   .nav-links a.active { background: rgba(255, 255, 255, 0.1); }
   .nav-cta { margin-left: 0; margin-top: 8px; text-align: center; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
   .hero { padding: 64px 0 76px; }
   .hero-stats { gap: 22px; margin-top: 44px; }
   .scorecard-body { grid-template-columns: 1fr; }
