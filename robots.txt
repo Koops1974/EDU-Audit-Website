@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /localpeak/
 
 Sitemap: https://edu-audit.co.uk/sitemap.xml
